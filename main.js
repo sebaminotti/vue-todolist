@@ -12,6 +12,7 @@ const app = new Vue ({
       'fare shopping',
       'prendere su cane e morosa',
       'partire',
+      '-------------------------'
 
      ]
     },

@@ -16,9 +16,12 @@
         <img src="https://www.boolean.careers/images/misc/logo.png" alt="logo">
      </div>
      <div class="intestazione">
-         <h1>TODO-LIST STUDENTI</h1>
+         <h1>COSA FARE OGGI?</h1>
      </div>
-
+      <!-- inserisco un imput per inserire i miei elementi nella lista , 
+       inserisco due bottoni per aggiungere un elemento alla mia lista , aggiungo la possibilità di
+       eliminare l'intera lista con un button , aggiungo la possibilità di inserire un dato tramite imput
+    ed enter -->
      <div class="newTodo">
         <input @keyUp.enter='addTodo' type="text" placeholder="nuovi elementi lista" v-model="nuoviTodo" name="" id="">
         <button @click="addTodo">Aggiungi alla lista</button> <button @click="cancella">cancella lista</button>
@@ -27,15 +30,17 @@
 
 
 
-
+  
+     <!-- ciclo con un v-for per andare a prendere tutti gli elementi della mia lista  -->
 
      <div class="Todos">
         
        <ul v-if="todos.length > 0 ">
-           <li v-for="(todo,index) in todos">
+         <li v-for="(todo,index) in todos"><i class="fas fa-barcode"></i>
                {{todo}}
                <i @click="removeTodo(index) " class="fas fa-times"></i>
            </li>
+         
        </ul>
        <h4 v-else>NESSUN ELEMENTO NELLA LISTA</h4>
      </div>
